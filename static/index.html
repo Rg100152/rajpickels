@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raj Pickles — Taste of Tradition, Wrapped in Elegance</title>
+<meta name="description" content="Premium homemade Indian pickles, handcrafted in small batches. Book fresh mango, lemon, garlic and mixed achar online from Raj Pickles.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🫙</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar glass" id="navbar">
+  <a class="logo" href="#home">Raj<span>Pickles</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+</nav>
+
+<header class="hero" id="home">
+  <div class="hero-glow glow-1"></div>
+  <div class="hero-glow glow-2"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Small-batch · Handcrafted · Since 1985</p>
+    <h1>Taste of Tradition,<br><span>Wrapped in Elegance.</span></h1>
+    <p class="hero-sub">Sun-cured raw mangoes, tangy lemons and fiery garlic — slow-pickled in cold-pressed mustard oil with recipes passed down three generations.</p>
+    <div class="hero-cta">
+      <a href="#products" class="btn btn-primary">Book Your Jar Now</a>
+      <a href="#about" class="btn btn-ghost">Our Story</a>
+    </div>
+    <div class="hero-badges">
+      <div class="badge glass"><strong>40+</strong><small>Years of craft</small></div>
+      <div class="badge glass"><strong>12k+</strong><small>Happy jars delivered</small></div>
+      <div class="badge glass"><strong>100%</strong><small>No preservatives</small></div>
+    </div>
+  </div>
+  <div class="hero-visual" aria-hidden="true">
+    <div class="floating-jar glass">
+      <div class="jar-emoji">🫙</div>
+      <div class="jar-label">Raj Pickles<br><span>Maazi Khegaar Special</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="products" id="products">
+  <p class="section-eyebrow">The Collection</p>
+  <h2 class="section-title">Our Signature <span>Achars</span></h2>
+  <p class="section-sub">Every jar is hand-mixed, sun-cured and sealed fresh — order today, taste tomorrow.</p>
+  <div class="product-grid" id="productGrid"></div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-card glass">
+    <p class="section-eyebrow">Our Story</p>
+    <h2 class="section-title">Three generations,<br><span>one secret masala.</span></h2>
+    <p>Started in a small kitchen in 1985, Raj Pickles still cures every batch under the open sun — no shortcuts, no preservatives, no artificial colour. Each jar carries the warmth of a family recipe, sealed with love and shipped across India.</p>
+    <ul class="about-points">
+      <li>🫒 Cold-pressed mustard oil only</li>
+      <li>☀️ Sun-cured for 15 days minimum</li>
+      <li>🚫 Zero preservatives or colour</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="footer" id="contact">
+  <div class="footer-inner glass">
+    <div>
+      <a class="logo small" href="#home">Raj<span>Pickles</span></a>
+      <p>Premium homemade achar, delivered fresh to your doorstep.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>+91 98765 43210</p>
+      <p>hello@rajpickles.in</p>
+      <p>Chandni Chowk, Delhi — 110006</p>
+    </div>
+    <div class="footer-col">
+      <h4>Hours</h4>
+      <p>Mon–Sat: 9 AM – 8 PM</p>
+      <p>Sunday: 10 AM – 6 PM</p>
+    </div>
+  </div>
+  <p class="footer-copy">© <span id="year"></span> Raj Pickles. Made with ♥ in India.</p>
+</footer>
+
+<div class="modal-backdrop" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+  <div class="modal glass">
+    <button class="modal-close" id="closeModal" aria-label="Close">×</button>
+    <p class="section-eyebrow">Reserve Your Jar</p>
+    <h3 id="modalTitle">Book Your Achar</h3>
+    <p class="modal-pickle" id="modalPickle"></p>
+    <form id="bookingForm" novalidate>
+      <label>Full Name
+        <input type="text" name="customerName" id="customerName" placeholder="e.g. Raj Sharma" required minlength="2" maxlength="80">
+      </label>
+      <label>Mobile Number
+        <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="e.g. 98765 43210" required inputmode="numeric">
+      </label>
+      <div class="form-row">
+        <label>Pickle Type
+          <select name="pickleType" id="pickleType" required></select>
+        </label>
+        <label>Quantity
+          <select name="quantityInGrams" id="quantityInGrams" required>
+            <option value="250">250 g</option>
+            <option value="500" selected>500 g</option>
+            <option value="1000">1 kg</option>
+            <option value="2000">2 kg</option>
+            <option value="5000">5 kg (Family)</option>
+          </select>
+        </label>
+      </div>
+      <label>Delivery Address
+        <textarea name="deliveryAddress" id="deliveryAddress" rows="2" placeholder="House no., street, city, PIN code" required minlength="10" maxlength="300"></textarea>
+      </label>
+      <p class="form-error" id="formError" role="alert"></p>
+      <button type="submit" class="btn btn-primary full" id="confirmBtn">Confirm Order</button>
+    </form>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
